@@ -1,7 +1,12 @@
 import React from 'react'
+import { HeaderPrincipal } from '../styles/CommonComponents';
 
 export const Header = () => {
     return (
-        <h1>Dede Header</h1>
-    )
+        <HeaderPrincipal>
+            <div>
+                <h1>Hotel Gatsby</h1>
+            </div>
+        </HeaderPrincipal>
+    );
 }
