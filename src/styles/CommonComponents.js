@@ -89,7 +89,7 @@ export const TituloInicio = styled.h2`
     margin-top: 4rem;
 `; 
 
-export const TextoInicio = styled.div`
+export const Contenido = styled.main`
     padding-top: 4rem;
     max-width: 1200px;
     width: 95%;

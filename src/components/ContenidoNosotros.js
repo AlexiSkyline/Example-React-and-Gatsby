@@ -1,18 +1,18 @@
 import React, { Fragment } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import { Contenido, TituloInicio } from '../styles/CommonComponents';
 import BackgroundImage from 'gatsby-background-image';
+import { Contenido, TituloInicio } from '../styles/CommonComponents';
 
-export const ContenidoInicio = () => {
+export const ContenidoNosotros = () => {
 
-    const informacion = useStaticQuery( graphql`
+    const resultado = useStaticQuery( graphql`
         query {
-            allDatoCmsPagina( filter: { slug: { eq: "inicio" } } ) {
+            allDatoCmsPagina( filter: { slug: { eq: "nosotros" } } ) {
                     nodes {
                             titulo
                             contenido
                             imagen {
-                                fluid {
+                                fluid( maxWidth: 1200 ) {
                                     ...GatsbyDatoCmsFluid
                                 }
                             }
@@ -21,11 +21,11 @@ export const ContenidoInicio = () => {
         }` 
     );
 
-    const { titulo, contenido, imagen } = informacion.allDatoCmsPagina.nodes[0];
-
+    const { titulo, contenido, imagen } = resultado.allDatoCmsPagina.nodes[0];
+    
     return (
         <Fragment>
-            <TituloInicio>{ titulo }</TituloInicio>   
+            <TituloInicio>{ titulo }</TituloInicio>
 
             <Contenido>
                 <p>{ contenido }</p>
