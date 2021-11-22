@@ -20,8 +20,6 @@ export const useHabitaciones = () => {
         }
     `);
 
-    console.log( data );
-
     return data.allDatoCmsHabitacion.nodes.map( habitacion => ({
         titulo: habitacion.titulo,
         id: habitacion.id,

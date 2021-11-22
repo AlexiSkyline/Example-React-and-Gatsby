@@ -9,7 +9,7 @@ import { HabitacionPreview } from '../components/HabitacionPreview';
 const IndexPage = () => {
 
   const habitaciones = useHabitaciones();
-    console.log( habitaciones );
+   
   return (
       <Layout>
           <ImagenHotel />
