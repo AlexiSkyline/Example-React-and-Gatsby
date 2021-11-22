@@ -105,3 +105,51 @@ export const Contenido = styled.main`
         line-height: 2;
     }
 `;
+
+export const TituloHabitaciones = styled.h2`
+    text-align: center;
+    margin-top: 5rem;
+    font-size: 3rem;
+`;
+
+export const Boton = styled( Link )`
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: rgba( 44, 62, 80, .85 );
+    width: 100%;
+    color: #FFF;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+`;
+
+export const ContenedorHabitacion = styled.div`
+    border: 1px solid #e1e1e1;
+    margin-bottom: 2rem;
+
+    div {
+        padding: 3rem;
+    }
+
+    h3 {
+        font-size: 3rem;
+    }
+`;
+
+export const ListadoHabitaciones = styled.ul`
+    max-width: 1200px;
+    width: 95%;
+    margin: 4rem auto 0 auto;
+
+    @media ( min-width: 768px ) {
+        display: grid;
+        grid-template-columns: repeat( 3, 1fr );
+        column-gap:  3rem;
+    }
+`;
+
+export const ImagenHabitacion = styled( BackgroundImage )`
+    height: 250px;
+`;

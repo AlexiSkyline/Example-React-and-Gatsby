@@ -2,13 +2,34 @@ import * as React from 'react';
 import { Layout } from '../components/Layout';
 import { ImagenHotel } from '../components/ImagenHotel';
 import { ContenidoInicio } from '../components/ContenidoInicio';
+import { useHabitaciones } from '../hooks/useHabitaciones';
+import { ListadoHabitaciones, TituloHabitaciones } from '../styles/CommonComponents';
+import { HabitacionPreview } from '../components/HabitacionPreview';
 
-const IndexPage = () => (
-  <Layout>
-      <ImagenHotel />
+const IndexPage = () => {
 
-      <ContenidoInicio />
-  </Layout>
-);
+  const habitaciones = useHabitaciones();
+    console.log( habitaciones );
+  return (
+      <Layout>
+          <ImagenHotel />
+    
+          <ContenidoInicio />
+
+          <TituloHabitaciones>
+              Nuestras Habitaciones
+          </TituloHabitaciones>
+
+          <ListadoHabitaciones>
+            { habitaciones.map( habitacion => (
+                <HabitacionPreview 
+                    key={ habitacion.id }
+                    habitacion={ habitacion }
+                />
+            ))}
+          </ListadoHabitaciones>
+      </Layout>
+  );
+};
 
 export default IndexPage;

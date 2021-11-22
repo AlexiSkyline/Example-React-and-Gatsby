@@ -32,5 +32,5 @@ export const ContenidoNosotros = () => {
                 <BackgroundImage fluid={ imagen.fluid }/>
             </Contenido>
         </Fragment>
-    )
+    );
 }
