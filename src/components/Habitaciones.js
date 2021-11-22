@@ -1,5 +1,7 @@
 import React from 'react';
 import { graphql,  } from 'gatsby';
+import { Layout } from './Layout';
+import { ImageBackground, MainHabitacion } from '../styles/CommonComponents';
 
 export const query = graphql`
     query( $slug: String! ) {
@@ -18,13 +20,16 @@ export const query = graphql`
     }
 `;
 
-export default function HabitacionesTemplete ({ data }) {
+export default function HabitacionesTemplete ({ data:{ allDatoCmsHabitacion: { nodes } } }) {
 
-    console.log( data );
-    
+    const { titulo, contenido, imagen } = nodes[0];
     return (
-        <h1>
-            habitaciones.js            
-        </h1>
-    )
+        <Layout>
+            <MainHabitacion>
+                <h1>{ titulo }</h1>
+                <p>{ contenido }</p>
+                <ImageBackground fluid={ imagen.fluid }/>
+            </MainHabitacion>
+        </Layout>
+    );
 }

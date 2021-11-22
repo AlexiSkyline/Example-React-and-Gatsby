@@ -106,6 +106,12 @@ export const Contenido = styled.main`
     }
 `;
 
+export const EnlaceHome = styled( Link )`
+    color: #FFF;
+    text-align: center;
+    text-decoration: none;
+`;
+
 export const TituloHabitaciones = styled.h2`
     text-align: center;
     margin-top: 5rem;
@@ -152,4 +158,15 @@ export const ListadoHabitaciones = styled.ul`
 
 export const ImagenHabitacion = styled( BackgroundImage )`
     height: 250px;
+`;
+
+export const MainHabitacion = styled.main`
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 95%;
+
+    h1 {
+        text-align: center;
+        margin-top: 4rem;
+    }
 `;

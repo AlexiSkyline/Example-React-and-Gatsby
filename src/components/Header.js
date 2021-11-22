@@ -1,12 +1,14 @@
 import React from 'react'
-import { HeaderPrincipal } from '../styles/CommonComponents';
+import { EnlaceHome, HeaderPrincipal } from '../styles/CommonComponents';
 import { Navegacion } from './Navegacion';
 
 export const Header = () => {
     return (
         <HeaderPrincipal>
             <div>
-                <h1>Hotel Gatsby</h1>
+                <EnlaceHome to='/'>
+                    <h1>Hotel Gatsby</h1>
+                </EnlaceHome>
 
                 <Navegacion />
             </div>
