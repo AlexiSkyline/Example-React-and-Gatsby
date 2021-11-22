@@ -1,5 +1,4 @@
 import React from 'react';
-import BackgroundImage from 'gatsby-background-image';
 import { Boton, ContenedorHabitacion, ImagenHabitacion } from '../styles/CommonComponents';
 
 export const HabitacionPreview = ({ habitacion }) => {

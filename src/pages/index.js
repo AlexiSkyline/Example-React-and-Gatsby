@@ -30,6 +30,6 @@ const IndexPage = () => {
           </ListadoHabitaciones>
       </Layout>
   );
-};
+}
 
 export default IndexPage;
